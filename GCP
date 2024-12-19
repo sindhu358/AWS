@@ -6,3 +6,37 @@ low latency
 Global footprint
 Adhere to govt regulations
 
+
+Google cloud has multiple zones
+Each region has --> 3 zones
+                      |
+                  Each zone has
+                  one or more discrete cluster
+CLuster: distinct physical infrastructure that is housed in a data centre.
+
+
+## Compute Engine
+
+Generaly in corporate data centres, applications are delpoyed to physical servers.
+Whereas in Cloud you deploy applications as by:
+1. Renting the virtual servers
+2. Virtual Machines - Virtual servers in GCP
+3. Google Compute ENgine(GCE): Provisiona and Manage VM
+
+
+## Ip Addresses - VM
+Internal IP - Permanent Internal IP Addres which does not change during the lifetime of an instance.
+External IP - It changes if we stop and restart it again 
+Static IP - Permananent external IP adress that can be attached to a VM 
+
+
+## Instance Template
+creating an instance template
+  machine type, image,labels,startup script and other properties
+It is used to create VM instances and managed instance groups(group of vm)
+   can create similar instances
+cannot be updated
+make a copy of an existing template and modify that - Creating a new one
+
+
+
