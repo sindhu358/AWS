@@ -125,10 +125,11 @@ Identical VM's are created using a instance template
  **Feature**:
   - If instance is crashed, MIG launches another instance(Maintain certain no.of instances)
   - Detect the application failures using health check (`Self Healing`)
-  - Increase and decrease instances based on load(`Auto Scaling`)
-      configure auto-scaling automatically adjust the no.of instances based on load:
-        * `cool-down perio`: How long to wait before looking at autoscaling again
-        * `scale in controls`: Prevent in sudden drop in noof VM instances
+  - Increase and decrease instances based on load(`Auto Scaling`).
+
+      configure auto-scaling automatically adjust the no.of instances based on load:  
+        * `cool-down period`: How long to wait before looking at autoscaling again  
+        * `scale in controls`: Prevent in sudden drop in noof VM instances,  
             EG: Don't scale more than 10% or 3 instances in 5 min
   - Add `LoadBalancer` to distribute the load
   - Create instances in multiple zones
@@ -136,9 +137,23 @@ Identical VM's are created using a instance template
      * Rolling Updates: Release new version step by step(gradually).Update a percentage of instance to the the new verions at a time
      * Canary Deployment: Test new verion with a grp of instance before releasing it across all instances.     
 
-  
-  
-     
+  ### Cloud Load Balancing 
+  It distributes traffic across VM instances in 1 or more regions
+    1.**Managed Services**:
+      - Google cloud ensures that it is highly available
+      - Auto scales handles huge loads
+      - Load Balancers can be private or public
+    **Types**:
+     - External HTTPS
+     - Internal HTTPS
+     - SSL Proxy
+     - TCP proxy
+     - External Network TCP/UDP
+     - Internal TCP/UDP
+    ![image](https://github.com/user-attachments/assets/30ca85b0-3af6-4fd1-8a6b-9afd5c4f9641)
+
+    ![image](https://github.com/user-attachments/assets/339706e3-29e8-4b07-beea-846a4c2c1511)
+
 
 
 
