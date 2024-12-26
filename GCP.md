@@ -156,6 +156,146 @@ Identical VM's are created using a instance template
 
 
 
+## Managed Services:
+- IaaS
+- Paas
+- Faas(Function as service)
+- Caas(Container as service)
+- Serverless
+#### Iaas (Infrastructure as a Sevice):
+Use only **infrastructure** from cloud provider
+Using VM to deploy your appications or databases
+Deploying a python application
+Taking a VM 
+choosing the right OS
+installing applcation runtime(pytho/java/Node JS)
+application code 
+setup the configuration for it 
+
+Virtualization, Physical Hardware, Networking 
+
+#### PAAS: Platform as a Service:
+Use only **Platform** from cloud provider
+
+You are responsible for:
+- Configuration(of Applcation and Services)
+- Application code(if needed)
+
+Cloud provider is responsible for:
+- OS(incl,upgrades and patches)
+- Application runtime
+- Auto Scaling, Availability and Load balancing, etc..
+- Virtualization
+- Physical Hardware
+- Networking
+
+Database - Relational & No SQL(Amazon, RDS, Google cloud,SQL, AZUre SQL DB,etc), Queues, AI, ML, Operations,etc
+
+#### Caas(Container as Service):
+ENterprises are heading towards microservices architecture
+- Build small microservices
+- Flexibility to innovate and build applications in different programming languages(Go,Java, Python,etc..)
+  But deployments become complex due to multiple languages
+  **Container - Docker**
+  Create a Docker images for each microservice
+  Docker image has all needs of a microservice
+  - Application Runtime(JDK or Python or Node JS)
+  - Application code and Dependencies
+ Runs the same way on any infrastructure
+ - Your  local machine
+ - Corporate data center
+ - CLoud
+Advantages:
+-Docker containers are light weight and Compared to VM as they do not have a Fuest OS
+-DOcker provides isolation for containers
+- It is Cloud neutral
+
+##### Container Orchestration:
+ I want 10 instances of Micr A, 15 instances of mic
+ Container Image  Configuration
+ Container Orchestrator(Kubernetes)
+ CLuster
+ Virtual Server 1,2,3
+
+ **Features**
+ - Auto scaling- Scale containers based on demand
+ - Service discovery- Help microservices find one another
+ - Load Balancer - Distribute load among multiple instances or microservce
+ - Self healing - Do health check and replace failing instances
+ - Zer Downtime Deployment - Relaes new versions without downtime
+
+#### Serverless:
+- Zero visibility into infratructure 
+  - Flexible scaling and automated high availability
+
+Allowing to focusing on code and the cloud managed service takes care of all that is needed to scale your code to serve millions pf requests
+   you pay requests(invocations of your application) not for servers
+  eg: Faas
+
+  #### Saas (Software as a Service):
+  Centrally hosted software(most;y on the cloud)
+  - Offered on a subscription basis(pay-as-you-go)
+    EX:
+    -  Email, calendering and office tools(such as Outlook 365, microsoft Office 365, Gmail, Google Docs)
+    -  Customer relationship management(CRM), enterprise resource planning(ERP) and document management tools.
+  - Cloud provider is reponsible for :
+      - OS(incl,upgrades and patches)
+      - Application runtime
+      - Auto Scaling, Availability and Load balancing, etc.
+      - Application code and/or
+      - Application Configuration(memory,instance)
+  - Customer is responsible for :
+      - Configuring the software
+ ### Shared Responsibility Model
+ - Security in cloud is a Shared Responsibility:
+     Between GCp and the Customer
+ - GCP provides features to make security easy:
+     - Encryption at rest by default
+     - IAM
+     - KMS etc
+ - Customer responsibility vary eith the model:
+     - Saas: Content+Access Policies + Usage
+     - Paas: Saas + Deployment + Web Application Security
+     - Iaas: Paas + Operations + Networking Security + Guest OS
+  
+## GCP Managed Services for Compute:
+
+| Service| Details|Category
+|---------|--------|------|
+| Compute Engine| High-Performance and general purpose VMs that scale globally | IaaS |
+| Google Kubernetes Engine| Orchestrate containerized microservices on Kubernetes Needs advanced cluster configuration and monitoring | CaaS |
+| App Engine| Build highly scalable applications on a fully managed platform using open and familiar languages and tools | Paas(CaaS, Serverless) |
+| Cloud Functions | Build event driven applications using simple, single-purpose functions | Cloud Functions |
+| Cloud Run | develop and deploy highly scalable containerized applications, Doesn't need a cluster | Caas(Serverless) | 
+
+
+### APP Engine
+It is a simplest way to deploy and scale your application in GCP
+- Provides end-to- end application management
+- Use custom run-time and can write code in any language
+-  Connect to variety of GCP storage products(Cloud SQL, etc)
+Features:
+- automatic load balancing and Aut-scaling
+- Managed platform updates and application helath monitoring
+- Application versioning
+- Traffic splitting
+
+  For **Compute Engine**
+   - IAAS
+   - More flexibility
+   - More responsibility
+      - Choosing image
+      - Installing Software
+      - Choosing Hardware
+      - Fine Grained Access/Permisions(Certifictaes/Firewalls)
+      - Availability,etc
+    FOr **App Engine**
+  - Paas
+  - Serverless
+  - Lesser Responsibility
+  - Lower flexibilty
+
+
 
 
 
