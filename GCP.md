@@ -1,3 +1,10 @@
+### Data Lake :
+it is a large centralized large repo for storing you data into a single location
+It will be in the same raw data
+
+
+
+
 ## Regions
 Specific geographical locations to host local resources
 advantages:
